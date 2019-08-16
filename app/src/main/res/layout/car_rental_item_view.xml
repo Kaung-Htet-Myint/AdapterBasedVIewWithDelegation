@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_card1"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_margin="@dimen/margin_medium"
+        android:backgroundTint="@color/gray"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_card1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_price_and_brand_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:paddingStart="@dimen/margin_large"
+                android:paddingEnd="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/price"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/tv_avis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/avis"
+                    android:layout_marginStart="200dp"
+                    android:textSize="@dimen/text_heading_1x"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_detail_about_car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_price_and_brand_name"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_xlarge"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_economy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/economy"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/divider"/>
+
+                <TextView
+                    android:id="@+id/tv_chev_spark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/chev_spark"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"/>
+
+                <LinearLayout
+                    android:id="@+id/person_and_doors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_person_black_24dp"
+                       />
+
+                    <TextView
+                        android:id="@+id/tv_no_of_person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_of_person"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:textColor="@color/primary_text"/>
+
+                    <ImageView
+                        android:id="@+id/iv_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_work_black_24dp"
+                        android:layout_marginStart="@dimen/margin_medium_2" />
+
+                    <TextView
+                        android:id="@+id/tv_no_of_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_of_work"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:textColor="@color/primary_text"/>
+
+                    <ImageView
+                        android:id="@+id/iv_doors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_call_to_action_black_24dp"
+                        android:layout_marginStart="@dimen/margin_medium_2" />
+
+                    <TextView
+                        android:id="@+id/tv_no_of_doors"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_of_doors"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:textColor="@color/primary_text"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_car"
+                android:layout_width="168dp"
+                android:layout_height="168dp"
+                android:src="@drawable/chevrolet_spark_hatchback"
+                android:layout_below="@+id/ll_price_and_brand_name"
+                android:layout_toEndOf="@+id/ll_detail_about_car"
+                android:layout_marginStart="@dimen/margin_medium_3"/>
+
+            <LinearLayout
+                android:id="@+id/ll_pick_up_and_drop_off"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_detail_about_car"
+                android:layout_marginTop="@dimen/margin_xxlarge"
+                android:paddingStart="@dimen/margin_large"
+                android:paddingEnd="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_pick_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_pick_up_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apr_3_12_pm"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_pick_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_pick_up_time"
+                        android:text="@string/pick_up"
+                        android:textSize="@dimen/text_regular"
+                        android:textColor="@color/divider"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_non_airport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/diver_1"
+                        android:layout_width="120dp"
+                        android:layout_height="0.5dp"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:background="@color/divider"/>
+
+                    <TextView
+                        android:id="@+id/tv_non_air_port"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/non_air_port"
+                        android:layout_below="@id/diver_1"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginStart="@dimen/margin_xxlarge"
+                        android:textSize="@dimen/text_regular"
+                        android:textColor="@color/colorPrimaryDark"/>
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_drop_off"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_2">
+
+                    <TextView
+                        android:id="@+id/tv_drop_off_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/apr_6_12_pm"
+                        android:textSize="@dimen/text_regular"
+                        android:textStyle="bold"
+                        android:textColor="@color/primary_text"/>
+
+                    <TextView
+                        android:id="@+id/tv_drop_off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_drop_off_time"
+                        android:text="@string/drop_off"
+                        android:textSize="@dimen/text_regular"
+                        android:textColor="@color/divider"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

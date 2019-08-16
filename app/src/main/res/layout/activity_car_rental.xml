@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_chevron_left_black_48dp"
+                android:layout_marginTop="@dimen/margin_medium_3"
+                android:layout_marginStart="@dimen/margin_medium"/>
+
+            <TextView
+                android:id="@+id/tv_dubai_tile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:fontFamily="sans-serif-condensed"
+                android:text="@string/dubai_title"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_heading_2x"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_date_and_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_dubai_tile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/date_and_time"
+                android:textColor="@color/secondary_text" />
+
+
+            <ImageView
+                android:id="@+id/iv_book_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bookmark_black_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignTop="@+id/iv_back_button"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/tv_date_and_time"
+                android:layout_marginTop="@dimen/margin_medium_2" />
+
+            <LinearLayout
+                android:id="@+id/ll_tap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginEnd="@dimen/margin_large"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_lowest_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_lowest_price"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_text"/>
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_distance"
+                    android:layout_marginStart="@dimen/margin_xlarge"
+                    android:textColor="@color/divider"/>
+
+                <TextView
+                    android:id="@+id/tv_recommeded"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_recommended"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:textColor="@color/divider"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/tv_taxes_and_fees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/taxes_and_fees"
+                android:textColor="@color/icons"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_medium_2"/>
+
+            <Button
+                android:id="@+id/btn_select_filters"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_taxes_and_fees"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_centerHorizontal="true"
+                android:text="@string/btn_lbl"
+                android:textColor="@color/colorPrimary"
+                android:background="#ffff"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
